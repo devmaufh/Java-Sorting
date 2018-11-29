@@ -1,19 +1,18 @@
 public class Sorts {
     public void burbujaMejorada(int arrayay[])
     {
-        int buffer;
-        int i,j;
-        for(i = 0; i < arrayay.length; i++)
-        {
-            for(j = 0; j < i; j++)
-            {
-                if(arrayay[i] < arrayay[j])
-                {
-                    buffer = arrayay[j];
-                    arrayay[j] = arrayay[i];
-                    arrayay[i] = buffer;
+        for(int i=0; i<array.length; i++){
+            int swaps=0;
+            for(int j=0; j<array.length-i-1; j++){
+                if(arrayay[j]>arrayay[j+1]){
+                    int t=arrayay[j];
+                    arrayay[j]=arrayay[j+1];
+                    arrayay[j+1]=t;
+                    swaps++;
                 }
             }
+            if(swaps==0)
+                break;
         }
     }
 
